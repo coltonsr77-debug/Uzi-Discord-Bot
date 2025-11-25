@@ -24,7 +24,7 @@ Example `.env` (do not commit secrets):
 ```env
 DISCORD_TOKEN=your_token_here
 CLIENT_ID=123456789012345678
-
+```
 ## Installation
 
 1. Clone the repo:
