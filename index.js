@@ -8,6 +8,7 @@ const {
   Events,
   Partials
 } = require("discord.js");
+const fetch = require("node-fetch"); // NEW
 const { askUzi } = require("./uziAI");
 
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
@@ -35,7 +36,12 @@ const commandsData = [
         .setName("message")
         .setDescription("Your message to Uzi Doorman")
         .setRequired(true)
-    )
+    ),
+
+  // ------- NEW COMMAND -------
+  new SlashCommandBuilder()
+    .setName("commits")
+    .setDescription("Shows the latest commits for Uzi-Doorman-Bot")
 ].map(cmd => cmd.toJSON());
 
 // ---------------------
@@ -67,6 +73,7 @@ client.once(Events.ClientReady, async () => {
 client.on(Events.InteractionCreate, async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
+  // ROLEPLAY COMMAND
   if (interaction.commandName === "roleplay") {
     const userMessage = interaction.options.getString("message");
     await interaction.deferReply();
@@ -79,16 +86,38 @@ client.on(Events.InteractionCreate, async interaction => {
       await interaction.editReply("Uzi malfunctioned while processing that...");
     }
   }
+
+  // ------- NEW COMMITS COMMAND -------
+  if (interaction.commandName === "commits") {
+    await interaction.deferReply();
+
+    try {
+      const url = "https://api.github.com/repos/coltonsr77/Uzi-Doorman-Bot/commits";
+      const res = await fetch(url);
+      const commits = await res.json();
+
+      const latest = commits.slice(0, 5);
+
+      let message = "**Latest Commits — Uzi-Doorman-Bot:**\n\n";
+      latest.forEach((c, i) => {
+        message += `**${i + 1}.** ${c.commit.message}\n`;
+        message += `— *${c.commit.author.name}*\n\n`;
+      });
+
+      await interaction.editReply(message);
+    } catch (err) {
+      console.error("Commit fetch error:", err);
+      await interaction.editReply("❌ Could not fetch commits.");
+    }
+  }
 });
 
 // ---------------------
 // Auto Roleplay on Mentions or Replies
 // ---------------------
-client.on(Events.MessageCreate, async (message) => {
-  // Ignore bot messages
+client.on(Events.MessageCreate, async message => {
   if (message.author.bot) return;
 
-  // Check if bot was mentioned or replied to
   const mentioned =
     message.mentions.has(client.user) ||
     (message.reference &&
