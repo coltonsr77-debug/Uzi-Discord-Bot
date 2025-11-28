@@ -10,6 +10,7 @@ Uzi-Doorman-Bot is a small, focused Discord bot that roleplays as Uzi Doorman (f
 These commands are implemented and registered by index.js on startup:
 
 - `/roleplay` — Allows users to roleplay with the bot
+- `/commits`  — Shows the latest commits 
 
 Notes:
 - Global slash commands are registered using the CLIENT_ID and DISCORD_TOKEN.
