@@ -1,5 +1,5 @@
 // test.js
-// Checks if required npm packages are installed. Installs any missing ones automatically.
+// Checks if the required npm packages are installed. Installs any missing ones automatically.
 
 console.log("Checking for required dependencies...");
 
