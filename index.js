@@ -8,7 +8,7 @@ const {
   Events,
   Partials
 } = require("discord.js");
-const fetch = require("node-fetch"); // NEW
+const fetch = require("node-fetch"); // For the new commits command
 const { askUzi } = require("./uziAI");
 
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
@@ -38,10 +38,10 @@ const commandsData = [
         .setRequired(true)
     ),
 
-  // ------- NEW COMMAND -------
+  // ------- NEW COMMITS COMMAND -------
   new SlashCommandBuilder()
     .setName("commits")
-    .setDescription("Shows the latest commits for Uzi-Doorman-Bot")
+    .setDescription("Shows the latest commits for this discord bot")
 ].map(cmd => cmd.toJSON());
 
 // ---------------------
@@ -92,13 +92,13 @@ client.on(Events.InteractionCreate, async interaction => {
     await interaction.deferReply();
 
     try {
-      const url = "https://api.github.com/repos/coltonsr77/Uzi-Doorman-Bot/commits";
+      const url = "https://api.github.com/repos/coltonsr77/Uzi-Doorman-bot/commits";
       const res = await fetch(url);
       const commits = await res.json();
 
       const latest = commits.slice(0, 5);
 
-      let message = "**Latest Commits — Uzi-Doorman-Bot:**\n\n";
+      let message = "**Latest Commits — Uzi Doorman Bot:**\n\n";
       latest.forEach((c, i) => {
         message += `**${i + 1}.** ${c.commit.message}\n`;
         message += `— *${c.commit.author.name}*\n\n`;
