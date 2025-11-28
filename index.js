@@ -41,7 +41,7 @@ const commandsData = [
   // ------- NEW COMMITS COMMAND -------
   new SlashCommandBuilder()
     .setName("commits")
-    .setDescription("Shows the latest commits for this discord bot")
+    .setDescription("Shows the latest commits)
 ].map(cmd => cmd.toJSON());
 
 // ---------------------
@@ -98,7 +98,7 @@ client.on(Events.InteractionCreate, async interaction => {
 
       const latest = commits.slice(0, 5);
 
-      let message = "**Latest Commits — Uzi Doorman Bot:**\n\n";
+      let message = "**Latest Commits:**\n\n";
       latest.forEach((c, i) => {
         message += `**${i + 1}.** ${c.commit.message}\n`;
         message += `— *${c.commit.author.name}*\n\n`;
