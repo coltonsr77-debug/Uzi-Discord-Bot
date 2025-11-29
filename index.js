@@ -92,7 +92,7 @@ client.on(Events.InteractionCreate, async interaction => {
     await interaction.deferReply();
 
     try {
-      const url = "https://api.github.com/repos/coltonsr77/Uzi-Doorman-bot/commits";
+      const url = "https://api.github.com/repos/coltonsr77/Uzi-Doorman-Bot/commits";
       const res = await fetch(url);
       const commits = await res.json();
 
