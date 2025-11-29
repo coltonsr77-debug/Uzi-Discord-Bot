@@ -41,7 +41,7 @@ const commandsData = [
   // ------- NEW COMMITS COMMAND -------
   new SlashCommandBuilder()
     .setName("commits")
-    .setDescription("Shows the latest commits)
+    .setDescription("Shows the latest commits")
 ].map(cmd => cmd.toJSON());
 
 // ---------------------
