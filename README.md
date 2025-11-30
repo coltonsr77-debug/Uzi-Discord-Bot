@@ -41,7 +41,7 @@ npm install
 
 3. Copy and fill in environment variables:
 ```bash
-cp .env.example .env
+touch .env
 # edit .env and add your values
 ```
 
@@ -60,7 +60,6 @@ On startup the bot will:
 
 ## Behavior Details / Implementation Notes
 - The bot uses discord.js and registers global slash commands using REST + Routes.applicationCommands(CLIENT_ID).
-- Owner-only commands compare interaction.user.id to OWNER_ID.
 
 ## Troubleshooting
 - "Invalid token" on login — verify DISCORD_TOKEN.
