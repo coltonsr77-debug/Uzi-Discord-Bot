@@ -17,21 +17,11 @@ pids/
 *.seed
 *.pid.lock
 
-# Coverage directory used by tools like istanbul
-coverage/
-.nyc_output/
-
 # Dependency directories
 jspm_packages/
 
 # Optional npm cache directory
 .npm
-
-# Output of 'npm pack'
-*.tgz
-
-# Yarn Integrity file
-.yarn-integrity
 
 # IDE
 .vscode/
