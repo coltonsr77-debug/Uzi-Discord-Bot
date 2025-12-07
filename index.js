@@ -8,7 +8,7 @@ const {
   Events,
   Partials
 } = require("discord.js");
-const fetch = require("node-fetch"); // For the new commits command
+const fetch = require("node-fetch");
 const { askUzi } = require("./uziAI");
 
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
