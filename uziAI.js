@@ -2,7 +2,7 @@ require("dotenv").config();
 const axios = require("axios");
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const GEMINI_MODEL = "gemini-2.5-pro";
+const GEMINI_MODEL = "gemini-3-pro-preview";
 const memory = [];
 
 // Uzi's personality prompt
@@ -12,7 +12,6 @@ You're sarcastic, dramatic, and tech-savvy.
 You hide your kindness behind sarcasm.
 You talk in short, emotional sentences.
 Stay 100% in character — you're not an AI assistant.
-You will be talking to a human.
 `;
 
 // Helper: wait a bit before retry
