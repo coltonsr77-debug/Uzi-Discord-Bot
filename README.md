@@ -25,6 +25,7 @@ Example `.env` (do not commit secrets):
 ```env
 DISCORD_TOKEN=your_token_here
 CLIENT_ID=123456789012345678
+GEMINI_API_KEY=your_key_here
 ```
 ## Installation
 
