@@ -27,7 +27,3 @@ pids/
 # OS
 .DS_Store
 Thumbs.db
-
-# Build outputs
-dist/
-build/
