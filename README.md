@@ -31,8 +31,8 @@ GEMINI_API_KEY=your_key_here
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/coltonsr77/Uzi-Discord-Bot.git
-cd Uzi-Discord-Bot
+git clone https://github.com/coltonsr77/Uzi-Doorman-Bot.git
+cd Uzi-Doorman-Bot
 ```
 
 2. Install dependencies:
@@ -49,6 +49,8 @@ touch .env
 4. Run the bot:
 ```bash
 node index.js
+or
+npm start
 ```
 
 On startup the bot will:
