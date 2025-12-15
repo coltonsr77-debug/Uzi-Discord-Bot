@@ -6,7 +6,7 @@ console.log("Checking for required dependencies...");
 const { execSync } = require("child_process");
 
 // List of required npm packages
-const requiredPackages = ["axios", "discord.js", "dotenv", "node-fetch"];
+const requiredPackages = ["axios", "discord.js", "dotenv", "node-fetch", "npm"];
 
 // Function to check if a package is installed
 function isInstalled(pkg) {
