@@ -50,7 +50,7 @@ touch .env
 4. Run the bot:
 ```bash
 node index.js
-or
+# or
 npm start
 ```
 
