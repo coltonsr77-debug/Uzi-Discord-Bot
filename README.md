@@ -20,6 +20,7 @@ Create a `.env` file and set these values:
 
 - DISCORD_TOKEN=<your-bot-token>         # required
 - CLIENT_ID=<your-application-client-id> # required (used to register global slash commands)
+- GEMINI_API_KEY=<your-gemini-api-key>   # required (used to roleplay)  
 
 Example `.env` (do not commit secrets):
 ```env
