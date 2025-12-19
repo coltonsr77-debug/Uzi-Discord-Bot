@@ -17,11 +17,7 @@ pids/
 # Optional npm cache directory
 .npm
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# Docker Files
 *.dockerfile
 
 # OS
