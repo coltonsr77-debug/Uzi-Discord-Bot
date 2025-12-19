@@ -107,7 +107,7 @@ client.on(Events.InteractionCreate, async interaction => {
       await interaction.editReply(message);
     } catch (err) {
       console.error("Commit fetch error:", err);
-      await interaction.editReply("❌ Could not fetch commits.");
+      await interaction.editReply("Could not fetch commits.");
     }
   }
 });
