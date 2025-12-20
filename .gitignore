@@ -17,7 +17,7 @@ pids/
 # Optional npm cache directory
 .npm
 
-# Docker Files
+# Docker
 *.dockerfile
 
 # OS
