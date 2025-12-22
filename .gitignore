@@ -20,6 +20,6 @@ pids/
 # Docker
 *.dockerfile
 
-# OS
+# Windows
 .DS_Store
 Thumbs.db
