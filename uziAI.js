@@ -2,7 +2,7 @@ require("dotenv").config();
 const axios = require("axios");
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const GEMINI_MODEL = "gemini-3-flash";
+const GEMINI_MODEL = "gemini-2.5-flash";
 const memory = [];
 
 // Uzi's personality prompt
