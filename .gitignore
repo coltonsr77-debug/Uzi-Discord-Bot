@@ -7,3 +7,4 @@ node_modules/
 # Windows
 .DS_Store
 Thumbs.db
+desktop.ini
