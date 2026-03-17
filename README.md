@@ -32,7 +32,7 @@ GEMINI_API_KEY=your_key_here
 
 1. Clone the repo:
 ```bash
-git clone https://github.com/coltonsr77/Uzi-Doorman-Bot.git
+wget https://github.com/coltonsr77/Uzi-Doorman-Bot/archive/refs/tags/v1.1.0.zip
 cd Uzi-Doorman-Bot
 ```
 
