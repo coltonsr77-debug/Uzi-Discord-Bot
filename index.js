@@ -14,7 +14,7 @@ const { askUzi } = require("./uziAI");
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 
-// Create client with message content intents for mentions
+// Create client with message content intents for mentions.
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -87,7 +87,7 @@ client.on(Events.InteractionCreate, async interaction => {
     }
   }
 
-  // ------- NEW COMMITS COMMAND -------
+  // COMMITS COMMAND
   if (interaction.commandName === "commits") {
     await interaction.deferReply();
 
@@ -113,7 +113,7 @@ client.on(Events.InteractionCreate, async interaction => {
 });
 
 // ---------------------
-// Auto Roleplay on Mentions or Replies
+// Auto Roleplay on Mentions or Replies.
 // ---------------------
 client.on(Events.MessageCreate, async message => {
   if (message.author.bot) return;
