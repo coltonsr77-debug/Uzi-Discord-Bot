@@ -54,7 +54,7 @@ node index.js
 npm start
 ```
 
-## Installation (Stable)
+## Installation (Beta)
 
 1. Clone the repo:
 ```bash
