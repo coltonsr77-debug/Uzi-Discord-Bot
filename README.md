@@ -34,7 +34,6 @@ GEMINI_API_KEY=your_key_here
 ```bash
 sudo apt install wget
 wget https://github.com/coltonsr77/Uzi-Doorman-Bot/archive/refs/tags/v1.1.1.zip
-cd v1.1.1
 ```
 
 2. Install dependencies:
@@ -54,6 +53,33 @@ node index.js
 # or
 npm start
 ```
+
+## Installation (Stable)
+
+1. Clone the repo:
+```bash
+sudo apt install wget
+wget https://github.com/coltonsr77/Uzi-Doorman-Bot/archive/refs/tags/v1.1.2-Beta1.zip
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Copy and fill in environment variables:
+```bash
+touch .env
+# edit .env and add your values
+```
+
+4. Run the bot:
+```bash
+node index.js
+# or
+npm start
+```
+
 
 On startup the bot will:
 - Log in with DISCORD_TOKEN
