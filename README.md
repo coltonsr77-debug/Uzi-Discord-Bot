@@ -49,8 +49,6 @@ touch .env
 
 4. Run the bot:
 ```bash
-node index.js
-# or
 npm start
 ```
 
@@ -75,8 +73,6 @@ touch .env
 
 4. Run the bot:
 ```bash
-node index.js
-# or
 npm start
 ```
 
