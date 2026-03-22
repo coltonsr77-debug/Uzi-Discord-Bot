@@ -38,7 +38,7 @@ const commandsData = [
         .setRequired(true)
     ),
 
-  // ------- NEW COMMITS COMMAND -------
+  // ------- Commits Command -------
   new SlashCommandBuilder()
     .setName("commits")
     .setDescription("Shows the latest commits from GitHub")
@@ -73,7 +73,7 @@ client.once(Events.ClientReady, async () => {
 client.on(Events.InteractionCreate, async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  // ROLEPLAY COMMAND
+  // Roleplay Command
   if (interaction.commandName === "roleplay") {
     const userMessage = interaction.options.getString("message");
     await interaction.deferReply();
