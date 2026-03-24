@@ -57,7 +57,7 @@ npm start
 1. Clone the repo:
 ```bash
 sudo apt install wget
-wget https://github.com/coltonsr77/Uzi-Doorman-Bot/archive/refs/tags/v1.1.2-Beta1.zip
+wget https://github.com/coltonsr77/Uzi-Doorman-Bot/archive/refs/tags/v1.1.2-Beta2.zip
 ```
 
 2. Install dependencies:
