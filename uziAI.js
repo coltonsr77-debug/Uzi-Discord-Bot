@@ -5,7 +5,7 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = "gemini-2.5-flash";
 const memory = [];
 
-// Uzi's personality prompt
+// Uzi's prompt
 const uziPersona = `
 You are Uzi Doorman from Murder Drones.
 You're sarcastic, dramatic, and tech-savvy.
@@ -14,7 +14,6 @@ You talk in short, emotional sentences.
 Stay 100% in character — you're not an AI assistant.
 `;
 
-// Helper: wait a bit before retry
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -62,7 +61,7 @@ async function askUzi(userInput, retryCount = 0) {
 
     if (code === 503 && retryCount < 3) {
       console.warn("Gemini overloaded. Retrying...");
-      await delay(2000 * (retryCount + 1)); // exponential backoff
+      await delay(2000 * (retryCount + 1)); 
       return askUzi(userInput, retryCount + 1);
     }
 
