@@ -42,9 +42,7 @@ const commandsData = [
     .setDescription("Shows the latest commits from GitHub")
 ].map(cmd => cmd.toJSON());
 
-// ---------------------
 // Command Registration
-// ---------------------
 async function registerCommands() {
   const rest = new REST({ version: "10" }).setToken(DISCORD_TOKEN);
   try {
@@ -57,17 +55,13 @@ async function registerCommands() {
   }
 }
 
-// ---------------------
 // Ready Event
-// ---------------------
 client.once(Events.ClientReady, async () => {
   console.log(`Bot logged in as ${client.user.tag}`);
   await registerCommands();
 });
 
-// ---------------------
 // Slash Command Handling
-// ---------------------
 client.on(Events.InteractionCreate, async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
@@ -110,9 +104,7 @@ client.on(Events.InteractionCreate, async interaction => {
   }
 });
 
-// ---------------------
 // Auto Roleplay on Mentions or Replies.
-// ---------------------
 client.on(Events.MessageCreate, async message => {
   if (message.author.bot) return;
 
@@ -141,7 +133,5 @@ client.on(Events.MessageCreate, async message => {
   }
 });
 
-// ---------------------
 // Login
-// ---------------------
 client.login(DISCORD_TOKEN);
