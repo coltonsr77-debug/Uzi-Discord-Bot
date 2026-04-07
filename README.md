@@ -47,7 +47,12 @@ touch .env
 # edit .env and add your values
 ```
 
-4. Run the bot:
+4. Test the bot:
+```bash
+node test.js
+```
+
+5. Run the bot:
 ```bash
 npm start
 ```
@@ -71,7 +76,12 @@ touch .env
 # edit .env and add your values
 ```
 
-4. Run the bot:
+4. Test the bot:
+```bash
+node test.js
+```
+
+5. Run the bot:
 ```bash
 npm start
 ```
